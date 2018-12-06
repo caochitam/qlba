@@ -1,0 +1,10 @@
+app-nav-bar{
+background-color: #1976d2;
+}
+.neu-navbar{}
+app-list{
+  border-right: 1px solid rgba(0,0,0,.1);
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: rgba(0, 0, 0, 0.1);
+}

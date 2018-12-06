@@ -1,0 +1,12 @@
+form{
+  padding-top: 15px;
+  height: calc(100vh - 7.6rem);
+  overflow-y: auto;
+}
+.command_bar{
+  padding: 0.5rem;
+  border-top: 1px solid rgba(0,0,0,.05); 
+}
+.btn-save{
+  /* float: right; */
+}

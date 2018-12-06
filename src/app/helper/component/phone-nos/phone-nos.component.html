@@ -1,0 +1,17 @@
+<div class="cover form-control">
+  <div class="inner">
+    <span *ngFor="let phoneNo of phoneNos; let i = index " class="phoneNo badge badge-light float-left">
+      {{phoneNo}}
+      <span class="clsPhone" (click)="deletePhoneNo(i)">x</span>
+    </span>
+    <input
+      class="inputPhoneNo float-left"
+      [(ngModel)] = "newPhoneNo"
+      type="text"
+      placeholder="09xxxxxxxx"
+      (keydown.enter)="addPhoneNo($event)"
+      (keydown.tab)="addPhoneNo($event)"
+      (blur)="addPhoneNo($event)"
+      (keydown.backspace)="deleteLast($event)">
+  </div>
+</div>

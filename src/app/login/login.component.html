@@ -1,0 +1,23 @@
+<div id="container" class="text-center">
+	<!-- <button class="btn" style="position: absolute;top: 0;left: 0;" (click)="goBack()">Go Back</button> -->
+	<form class="form-signin" #loginForm="ngForm" (submit)="login(loginForm.value)">
+		<img class="mb-4" src="https://raw.githubusercontent.com/stvhwrd/icons/master/atom/Atom-no_shadows-512.png" alt="" width="72"
+		 height="72">
+		<h1 class="h3 mb-3 font-weight-normal">Đăng nhập</h1>
+		<label for="inputEmail" class="sr-only">Địa chỉ email</label>
+
+		<input type="email" id="email" name="inputEmail" class="form-control" placeholder="Địa chỉ email" ngModel required>
+
+		<label for="inputPassword" class="sr-only">Mật khẩu</label>
+
+		<input type="password" id="password" name="inputPassword" class="form-control" placeholder="Mật khẩu" ngModel required>
+
+		<div class="checkbox mb-3">
+			<label>
+          <input type="checkbox" value="remember-me"> Ghi nhớ đăng nhập
+        </label>
+		</div>
+		<button class="btn btn-lg btn-primary btn-block" type="submit" [disabled]="loginForm.invalid">Đăng nhập</button>
+		<p class="mt-5 mb-3 text-muted">© 2018-2019</p>
+	</form>
+</div>

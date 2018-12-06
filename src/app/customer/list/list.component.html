@@ -1,0 +1,31 @@
+<div class="neu_search">
+	<div class="input-group custom-search-form">
+		<input type="text" class="form-control" placeholder="Search...">
+	</div>
+</div>
+<div class="neu_list">
+  <div class="list-group">
+    <a class="list-group-item list-group-item-action" (click)="emitNewContact()" >Thêm mới</a>
+    <a *ngFor="let contact of contacts$ | async" class="list-group-item list-group-item-action" (click)="emitSelectedContact(contact)">
+      {{contact.fullName}}
+    </a>
+    <a *ngFor="let contact of contacts$ | async" class="list-group-item list-group-item-action" (click)="emitSelectedContact(contact)">
+      {{contact.fullName}}
+    </a>
+    <a *ngFor="let contact of contacts$ | async" class="list-group-item list-group-item-action" (click)="emitSelectedContact(contact)">
+      {{contact.fullName}}
+    </a>
+    <a *ngFor="let contact of contacts$ | async" class="list-group-item list-group-item-action" (click)="emitSelectedContact(contact)">
+      {{contact.fullName}}
+    </a>
+    <a *ngFor="let contact of contacts$ | async" class="list-group-item list-group-item-action" (click)="emitSelectedContact(contact)">
+      {{contact.fullName}}
+    </a>
+    <a *ngFor="let contact of contacts$ | async" class="list-group-item list-group-item-action" (click)="emitSelectedContact(contact)">
+      {{contact.fullName}}
+    </a>
+    <a *ngFor="let contact of contacts$ | async" class="list-group-item list-group-item-action" (click)="emitSelectedContact(contact)">
+      {{contact.fullName}}
+    </a>
+  </div>
+</div>

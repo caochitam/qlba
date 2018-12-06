@@ -1,0 +1,7 @@
+<app-nav-bar class="navbar navbar-expand navbar-dark flex-column flex-md-row neu-navbar"></app-nav-bar>
+<div class="container-fluid">
+	<div class="row">
+		<app-list class="col-xl-3 neu-sidebar" (select)="selectContact($event)"></app-list>
+		<app-detail class="col-xl-9" [contact]="selectedContact"></app-detail>
+	</div>
+</div>
