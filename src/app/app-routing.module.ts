@@ -1,17 +1,19 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
+import { LoginComponent } from './login/login.component';
+import { ContactComponent } from './contact/contact.component'
+import { AuthGuard } from './auth.guard';
 const routes: Routes = [
-  // { path: '', redirectTo: 'benh-nhan', pathMatch: 'full' },
-  // {
-  //   path: 'benh-nhan',
-  //   component: CustomerComponent,
-  //   canActivate: [AuthGuard]
-  // },
-  // {
-  //   path: 'login', 
-  //   component: LoginComponent,
-  // },
+  { path: '', redirectTo: 'lien-he', pathMatch: 'full' },
+  {
+    path: 'lien-he',
+    component: ContactComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'login', 
+    component: LoginComponent,
+  },
 ];
 
 @NgModule({
