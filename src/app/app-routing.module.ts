@@ -11,7 +11,7 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
-    path: 'login', 
+    path: 'dang-nhap', 
     component: LoginComponent,
   },
 ];
