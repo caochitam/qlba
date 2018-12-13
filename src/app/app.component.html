@@ -1,7 +1,7 @@
 <!-- Main menu -->
 <nav [hidden]="hideNavBar" class="navbar navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Liên hệ</a>
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    <a class="navbar-brand" routerLink="lien-he">Liên hệ</a>
+    <button (click)="logOut()" class="btn btn-outline-success my-2 my-sm-0" type="button">Đăng xuất</button>
 </nav>
 <router-outlet></router-outlet>
 <ng-snotify></ng-snotify>

@@ -33,6 +33,7 @@ export class LoginComponent implements OnInit {
           body: `${this.inputEmail}`,
           config: {timeout:2000}
         });
+        this._router.navigate(['']);
       })
       .catch(e => {
         // console.log(e);
