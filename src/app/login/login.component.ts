@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { Observable} from 'rxjs';
 import { map } from 'rxjs/operators';
 import { AngularFireAuth } from '@angular/fire/auth';
-
+import { DataService } from '../share/data/data.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -17,6 +17,7 @@ export class LoginComponent implements OnInit {
     private _afa: AngularFireAuth,
     private _router: Router,
     private _snotify: SnotifyService,
+    private _data: DataService
   ) { }
 
   ngOnInit() {
@@ -33,7 +34,8 @@ export class LoginComponent implements OnInit {
           body: `${this.inputEmail}`,
           config: {timeout:2000}
         });
-        this._router.navigate(['']);
+        this._data.getData(); // Call DataService to get data from server
+        this._router.navigate(['']); // Redirect into home
       })
       .catch(e => {
         // console.log(e);

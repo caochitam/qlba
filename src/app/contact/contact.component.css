@@ -1,0 +1,10 @@
+:host{
+  display: block;
+  height: calc(100% - 3.5rem);
+}
+.main-row{
+  height: 100%;
+}
+app-list{
+  border-right: 1px solid slategrey;
+}

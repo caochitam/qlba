@@ -18,12 +18,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { ContactComponent } from './contact/contact.component';
+import { ListComponent } from './contact/list/list.component';
+import { DetailComponent } from './contact/detail/detail.component';
+
+// Services
+import { DataService } from './share/data/data.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    ContactComponent
+    ContactComponent,
+    ListComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +43,8 @@ import { ContactComponent } from './contact/contact.component';
   ],
   providers: [
     { provide: 'SnotifyToastConfig', useValue: ToastDefaults},
-    SnotifyService
+    SnotifyService,
+    DataService
   ],
   bootstrap: [AppComponent]
 })

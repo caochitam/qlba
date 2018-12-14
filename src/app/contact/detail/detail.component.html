@@ -1,0 +1,17 @@
+<form (submit)="save()">
+    <div class="row">
+        <div class="col-md-6 form-group">
+            <label for="displayName">Họ và tên</label>
+            <input name="displayName" [(ngModel)]="contact.displayName" type="text" class="form-control" required>
+        </div>
+        <div class="col-md-6 form-group">
+            <label for="phoneNumber">Số điện thoại</label>
+            <!-- <app-phone-nos [(phoneNos)]="contact.phoneNo"></app-phone-nos> -->
+        </div>
+    </div>
+
+</form>
+<div class="command-bar row">
+    <span></span>
+    <button class="btn btn-outline-success my-2 my-sm-0 float-right" (click)="save()">Thêm mới</button>
+</div>
