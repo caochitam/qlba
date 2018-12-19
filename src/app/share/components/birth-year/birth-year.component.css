@@ -1,0 +1,22 @@
+input {
+    margin: 0;
+    padding: 0;
+    border: none;
+    width: 100%;
+    color: inherit;
+}
+
+.birth-year {
+    width: 60%;
+}
+
+.age {
+    color: inherit;
+    width: 40%;
+    border: 1px solid #bbb;
+    border-top: none;
+    border-bottom: none;
+    border-radius: 25%;
+    padding: 0 5px;
+    text-align: center;
+}

@@ -1,11 +1,12 @@
-form{
-  height: calc(100% - 3rem);
+form {
+    height: calc(100% - 3rem);
 }
-.command-bar{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 3rem;
-  padding: 0.5rem;
-  border-top: 1px solid #aaa;
+
+.command-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 3rem;
+    padding: 0.5rem;
+    border-top: 1px solid #aaa;
 }

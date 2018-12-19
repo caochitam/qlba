@@ -1,0 +1,8 @@
+<input 
+    class="form-control"
+    placeholder="dd/mm/yyyy" 
+    bsDatepicker [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY' }"
+    [ngModel]="date | vnDate"
+    [ngModelOptions]="{standalone: true}"
+    (bsValueChange)="save($event)"
+>

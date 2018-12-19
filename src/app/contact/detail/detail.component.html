@@ -1,12 +1,42 @@
-<form (submit)="save()">
+<form>
     <div class="row">
         <div class="col-md-6 form-group">
             <label for="displayName">Họ và tên</label>
-            <input name="displayName" [(ngModel)]="contact.displayName" type="text" class="form-control" required>
+            <input name="displayName" [(ngModel)]="contact.displayName" class="form-control" required>
         </div>
         <div class="col-md-6 form-group">
             <label for="phoneNumber">Số điện thoại</label>
-            <!-- <app-phone-nos [(phoneNos)]="contact.phoneNo"></app-phone-nos> -->
+            <app-phone-nos-input [(phoneNumber)]="contact.phoneNumber"></app-phone-nos-input>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 form-group">
+            <label for="address">Địa chỉ</label>
+            <app-address-input [(address)]="contact.address" name="address" class="form-control"></app-address-input>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4 form-group">
+            <label for="email">Email</label>
+            <input name="email" [(ngModel)]="contact.email" class="form-control">
+        </div>
+        <div class="col-md-2 form-group">
+            <label for="gender">Giới tính</label>
+            <select name="gender" id="gender" [(ngModel)]="contact.gender" class="custom-select d-block w-100">
+                <option value="undefined">Chọn..</option>
+                <option value="0">Nam</option>
+                <option value="1">Nữ</option>
+            </select>
+        </div>
+        <div class="col-md-2">
+            <label>Năm sinh</label>
+            <app-birth-year [(birthYear)]="contact.birthYear" class="form-control"></app-birth-year>
+        </div>
+        <div class="col-md-4">
+            <label for="createDate">Ngày tạo</label>
+            <app-date-input [(date)]="contact.createTime"></app-date-input>
         </div>
     </div>
 

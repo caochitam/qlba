@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Contact } from './contact';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from '@angular/fire/firestore';
-
+import { AngularFireAuth } from '@angular/fire/auth';
 @Injectable({
   providedIn: 'root'
 })
@@ -11,8 +11,11 @@ export class DataService {
   private _contactCollection: AngularFirestoreCollection<Contact>;
 
   constructor(
-    private readonly _afs: AngularFirestore
-  ) {}
+    private readonly _afs: AngularFirestore,
+    private readonly _afa: AngularFireAuth,
+  ) {
+    if(this._afa.authState && !this.contacts) this.getData(); // Call getData if authenticated
+  }
 
   public getData(){
     // Get Contact Informations

@@ -1,0 +1,29 @@
+.phoneNo {
+    font: inherit;
+    background-color: #f8f9fa;
+    display: inline-block;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.delete {
+    display: none;
+    cursor: pointer;
+}
+
+.phone-no-wrap:hover>.delete {
+    padding: 0 2px;
+    color: white;
+    display: inline-block;
+    border-bottom-right-radius: 20%;
+    border-top-right-radius: 20%;
+    background-color: #d09c9c;
+}
+
+input {
+    margin: 0;
+    padding: 0;
+    border: none;
+    width: 100px;
+    color: inherit;
+}

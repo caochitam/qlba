@@ -1,0 +1,6 @@
+<span class="phone-no-wrap" *ngFor="let phoneNo of phoneNumber; let i = index ">
+  <span class="phoneNo">{{phoneNo}}</span>
+<span class="delete" (click)="deleteAPhoneNo(i)">x</span>
+<span class="splitter">, </span>
+</span>
+<input [(ngModel)]="newPhoneNumber" [ngModelOptions]="{standalone: true}" (keyup.enter)="addANewNumber()" (focusout)="addANewNumber()" (keyup.backspace)="deleteLastPhoneNo()" placeholder="...">
