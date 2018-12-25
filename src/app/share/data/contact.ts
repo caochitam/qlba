@@ -1,6 +1,10 @@
 import {firestore} from 'firebase';
-export class Address{
+export interface Address{
   full: string;
+}
+export interface Relationship{
+  type: string;
+  reference: firestore.DocumentReference;
 }
 export interface Contact {
   id: string;
@@ -11,6 +15,7 @@ export interface Contact {
   email: string;
   gender: number;
   birthYear: number;
+  relationship: Array<Relationship>;
   createTime: firestore.Timestamp;
   isActive: boolean;
   isDemo: boolean;

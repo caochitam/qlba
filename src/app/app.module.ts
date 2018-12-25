@@ -31,6 +31,7 @@ import { AddressInputComponent } from './share/components/address-input/address-
 import { BirthYearComponent } from './share/components/birth-year/birth-year.component';
 import { VnDatePipe } from './share/pipe/vn-date.pipe';
 import { DateInputComponent } from './share/components/date-input/date-input.component';
+import { RelationshipComponent } from './share/components/relationship/relationship.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { DateInputComponent } from './share/components/date-input/date-input.com
     AddressInputComponent,
     BirthYearComponent,
     VnDatePipe,
-    DateInputComponent
+    DateInputComponent,
+    RelationshipComponent
   ],
   imports: [
     BrowserModule,
