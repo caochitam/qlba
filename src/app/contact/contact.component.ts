@@ -6,7 +6,7 @@ import { Contact } from '../share/data/contact';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
-  selectedContact = new Contact();
+  selectedContact: Contact;
   constructor() { }
 
   ngOnInit() {

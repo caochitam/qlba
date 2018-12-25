@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 import { Contact } from './contact';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { environment } from '../../../environments/environment';
 @Injectable({
   providedIn: 'root'
 })
@@ -27,7 +28,10 @@ export class DataService {
   }
 
   public addContact(contact: Contact){
+    // Add demo field into contact if in the development
+    if (!environment.production) contact.isDemo = true;
     contact.id = this._afs.createId();
-    return this._contactCollection.doc(contact.id).set(JSON.parse(JSON.stringify(contact)));
+    return this._contactCollection.doc(contact.id).set(Object.assign({}, contact));
+    
   }
 }

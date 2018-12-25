@@ -13,13 +13,14 @@ export class BirthYearComponent implements OnInit {
   @Output() birthYearChange = new EventEmitter<number>();
   emit() {this.birthYearChange.emit(this.birthYear)}
   ngOnInit() {}
-  changeYear(){
-    this.age = this._currentYear - this.birthYear;
+  changeYear(val){
+    if(val > 1000){
+      this.birthYear = val;
+      this.age = this._currentYear - this.birthYear;
+    }else{
+      this.age = val
+      this.birthYear = this._currentYear - this.age;
+    }
     this.emit();
   }
-  changeAge(){
-    this.birthYear = this._currentYear - this.age;
-    this.emit();
-  }
-
 }
