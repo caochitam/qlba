@@ -1,0 +1,16 @@
+.list-area{
+    height: calc(100% - 3rem);
+}
+.item{
+    display: flex;
+    align-items: center;
+    height: 3rem;
+    margin: 0 -15px;
+    border-bottom: 1px solid #aaa;
+}
+.search-area{
+    height: 3rem;
+    border-top: 1px solid #aaa;
+    display: flex;
+    align-items: center;
+}

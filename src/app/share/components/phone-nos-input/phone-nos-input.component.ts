@@ -8,33 +8,33 @@ import { Component, OnInit, Input, Output, EventEmitter, HostBinding } from '@an
 export class PhoneNosInputComponent implements OnInit {
   newPhoneNumber: String;
   constructor() { }
-  @Input() phoneNumber: Array<String>;
-  @Output() phoneNumberChange = new EventEmitter<Array<String>>();
-  @HostBinding('class.form-control')
+  @Input() phoneNumbers: Array<String>;
+  @Output() phoneNumbersChange = new EventEmitter<Array<String>>();
+  // @HostBinding('class.form-control')
   ngOnInit() {
 
   }
   addANewNumber(){
     if(this.newPhoneNumber) {
-      if (this.phoneNumber)
-        this.phoneNumber.push(this.newPhoneNumber);
+      if (this.phoneNumbers)
+        this.phoneNumbers.push(this.newPhoneNumber);
       else 
-        this.phoneNumber = [this.newPhoneNumber];
+        this.phoneNumbers = [this.newPhoneNumber];
       this.newPhoneNumber = "";
       this.emit();
     }
   }
   deleteAPhoneNo(i: number){
-    this.phoneNumber.splice(i,1);
+    this.phoneNumbers.splice(i,1);
     this.emit();
   }
   deleteLastPhoneNo(){
-    if(!this.newPhoneNumber && this.phoneNumber && this.phoneNumber.length>0){
-      this.phoneNumber.splice(-1,1);
+    if(!this.newPhoneNumber && this.phoneNumbers && this.phoneNumbers.length>0){
+      this.phoneNumbers.splice(-1,1);
       this.emit();
     }
   }
   emit(){
-    this.phoneNumberChange.emit(this.phoneNumber);
+    this.phoneNumbersChange.emit(this.phoneNumbers);
   }
 }

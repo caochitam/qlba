@@ -6,7 +6,7 @@
         </div>
         <div class="col-md-6 form-group">
             <label for="phoneNumber">Số điện thoại</label>
-            <app-phone-nos-input [(phoneNumber)]="contact.phoneNumber"></app-phone-nos-input>
+            <app-phone-nos-input class="form-control" [(phoneNumbers)]="contact.phoneNumbers"></app-phone-nos-input>
         </div>
     </div>
 
@@ -44,12 +44,12 @@
     <div class="row">
         <div class="col-md-12 form-group">
             <label for="relationship">Quan hệ</label>
-            <app-relationship [(relationship)]="contact.relationship" name="relationship"  class="form-control"></app-relationship>
+            <app-relationship [(relationships)]="contact.relationships" name="relationship"  class="form-control"></app-relationship>
         </div>
     </div>
 
 </form>
 <div class="command-bar row">
     <span></span>
-    <button class="btn btn-outline-success my-2 my-sm-0 float-right" (click)="save()">Thêm mới</button>
+    <button class="btn btn-outline-success my-2 my-sm-0 float-right" (click)="save()">{{contact.id ? 'Cập nhật' : 'Thêm mới'}}</button>
 </div>

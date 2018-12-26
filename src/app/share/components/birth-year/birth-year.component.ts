@@ -7,20 +7,30 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class BirthYearComponent implements OnInit {
   private _currentYear = (new Date()).getFullYear();
+  year: number;
   age: number;
   constructor() { }
-  @Input() birthYear: number;
+  @Input() set birthYear (val: number){this.changeYear(val)};
   @Output() birthYearChange = new EventEmitter<number>();
-  emit() {this.birthYearChange.emit(this.birthYear)}
-  ngOnInit() {}
+  emit() {this.birthYearChange.emit(this.year)}
+  ngOnInit() {
+  }
   changeYear(val){
-    if(val > 1000){
-      this.birthYear = val;
-      this.age = this._currentYear - this.birthYear;
+    if(val){
+      if(val > 1000){
+        this.year = val;
+        this.age = this._currentYear - this.year;
+      }else{
+        this.age = val
+        this.year = this._currentYear - this.age;
+      }
     }else{
-      this.age = val
-      this.birthYear = this._currentYear - this.age;
+      this.year = null;
+      this.age = null;
     }
+  }
+  update(val){
+    this.changeYear(val);
     this.emit();
   }
 }

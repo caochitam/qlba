@@ -1,2 +1,2 @@
-<input class="float-left birth-year" [ngModel]="birthYear" placeholder="19xx" (change)="changeYear($event.target.value)" [ngModelOptions]="{standalone: true}">
-<input class="float-left age" [ngModel]="age" type="text" placeholder="xx" (change)="changeYear($event.target.value)" [ngModelOptions]="{standalone: true}">
+<input class="float-left birth-year" [ngModel]="year" placeholder="19xx" (change)="update($event.target.value)" [ngModelOptions]="{standalone: true}">
+<span class="float-left age">{{age ? age : 'xx'}}</span>

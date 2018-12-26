@@ -1,1 +1,18 @@
-<input type="text" class="form-control" placeholder="Tìm kiếm..." [(ngModel)]="searchStr" [ngModelOptions]="{standalone: true}" (keyup.enter)="search()">
+<div class="list-area">
+  <a class="item new"   hidden>Thêm mới</a>
+  <a class="item" *ngFor=" let contact of contacts | async" [routerLink]="[contact.id]" >
+  {{contact.displayName}}
+  </a>
+</div>
+<div class="search-area row">
+  <div class="col-md-12">
+    <input
+      type="text" 
+      class="form-control" 
+      placeholder="Tìm kiếm..." 
+      [(ngModel)]="searchStr" 
+      [ngModelOptions]="{standalone: true}" 
+      (keyup.enter)="search()"
+    >
+  </div>
+</div>

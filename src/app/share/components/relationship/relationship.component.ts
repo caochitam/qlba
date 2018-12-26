@@ -8,8 +8,8 @@ import { firestore } from 'firebase'
 })
 export class RelationshipComponent implements OnInit {
   constructor() { }
-  @Input() relationship: Array<Relationship>;
-  @Output() relationshipChange = new EventEmitter<Array<Relationship>>();
-  emit() {this.relationshipChange.emit(this.relationship)}
+  @Input() relationships: Array<Relationship>;
+  @Output() relationshipsChange = new EventEmitter<Array<Relationship>>();
+  emit() {this.relationshipsChange.emit(this.relationships)}
   ngOnInit() {}
 }

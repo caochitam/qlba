@@ -7,7 +7,8 @@ import { Contact } from '../share/data/contact';
 })
 export class ContactComponent implements OnInit {
   selectedContact: Contact;
-  constructor() { }
+  constructor(
+  ) { }
 
   ngOnInit() {
   }
